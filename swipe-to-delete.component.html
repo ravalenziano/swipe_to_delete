@@ -1,0 +1,13 @@
+<div class="swipeMasterContainer" #swipeMasterContainer>
+  <div class="swipeContainer" #swipeContainer (touchstart)="handleTouchStart($event)" (mousedown)="handleMouseDown($event)">
+    <div class="swipePlaceholder"><mat-icon *ngIf="swipeDirection == SwipeDirection.Right" class="mat-left">delete</mat-icon><mat-icon *ngIf="swipeDirection == SwipeDirection.Left" class="mat-right">delete</mat-icon></div>
+    <div #swipeContentContainer class="swipeContentContainer noselect">
+      <ng-content>
+      </ng-content>
+    </div>
+
+  </div>
+</div>
+
+
+
